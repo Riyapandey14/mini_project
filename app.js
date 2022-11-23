@@ -4,7 +4,7 @@ bodyParser      = require("body-parser"),
 expressSanitizer = require("express-sanitizer"),
 mongoose        = require("mongoose"),
 app             = express();
-mongoose.connect('mongodb://localhost:27017/restful_blog_app', {
+mongoose.connect('mongodb://127.0.0.1/restful_blog_app', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -24,7 +24,13 @@ var blogSchema = new mongoose.Schema({
 var Blog = mongoose.model("Blog", blogSchema);
 // INDEX
 app.get("/",function(req, res){
-	res.render("landing");
+    Blog.find({}, function (err, blogs){ // adding index functionality to retrieve all blogs from database
+        if (err) {
+            console.log(err);
+        } else {
+            res.render("landing", {blogs: blogs}); //blogs:blogs -> render index with data (blogs is the data)
+        }
+    });
 });
 app.get("/contact",function(req, res){
 	res.render("contact");

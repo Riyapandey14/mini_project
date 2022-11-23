@@ -1,6 +1,6 @@
 body
 {
-    background-color: rgb(250,190,0);
+    background-color:  rgba(177, 253, 13, 0.434);
 }
 .navbar-brand
 {
@@ -18,22 +18,7 @@ body
 {
     color: rgb(24, 22, 22);
 }
-.nav-link
-{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
-    color: black;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
 
-}
-.nav-link:hover
-{
-    color: wheat;
-    text-decoration: underline;
-    transition-duration:1s;
-}
 .text
 {
     color: white;
@@ -41,7 +26,7 @@ body
 }
 .navbar-toggler
 {
-    background-color: wheat;
+    background-color:  rgba(177, 253, 13, 0.434);
     border-radius: 100vh;
     height: 2rem;
     width: 2rem;
